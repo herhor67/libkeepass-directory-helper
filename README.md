@@ -12,6 +12,7 @@ The main entry point is the *KPHelper* class. It takes care of creating a key, c
 
 # Examples:
 
+Create helper, read file with pasword, read some api key to `std::string`.
 ```cpp
 	std::string path = "credentials.kdbx";
 	std::string pass = "SuperSeretPaword";
@@ -23,21 +24,22 @@ The main entry point is the *KPHelper* class. It takes care of creating a key, c
 //	curl ...
 ```
 
-
+Get a pointer to some entry, then use `username()` and `password()` directly.
 ```cpp
 	auto entry_ptr = KP.findEntry("internal/databases/mysql");
   
-//	mysql_connect("localhost:3306", entry_ptr->username(), entry_ptr->password(), "table");
+//	mysql_connect("localhost:3306", entry_ptr->username(), entry_ptr->password(), "my_schema");
 //	...
 ```
 
-
+// Empty group names are skipped, instead returns itself
 ```cpp
-	// Empty group name is skipped, instead returns base
+	// Get root group
 	auto root_ptr1 = KP.findGroup("");
 	auto root_ptr2 = KP.findGroup("/");
 	auto root_ptr3 = KP.findGroup("//////////");
 
+	// Get some entry
 	auto entry_ptr1 = KP.findEntry("some/arbitrary/path/to/entry");
 	auto entry_ptr2 = KP.findEntry("/some/arbitrary/path/to/entry");
 	auto entry_ptr3 = KP.findEntry("///some//arbitrary/path/////to//entry");
