@@ -5,7 +5,6 @@
 #include <exception>
 #include <stdexcept>
 
-
 #include <keepass/kdb.hh>
 #include <keepass/kdbx.hh>
 #include <keepass/key.hh>
@@ -94,6 +93,9 @@ public:
 
 	static Gptr findGroup(const std::string& groupname, Gptr basegroup)
 	{
+		if (groupname.empty())
+			return basegroup;
+
 		for (Gptr group : basegroup->Groups())
 		{
 			if (group->name() == groupname)
@@ -109,6 +111,6 @@ public:
 			if (entry->title().value() == entryname)
 				return entry;
 		}
-		throw std::invalid_argument("Could not find entry of such name!");
+		throw std::invalid_argument("Could not find entry of such title!");
 	}
 };
