@@ -32,7 +32,7 @@ Get a pointer to some entry, then use `username()` and `password()` directly.
 //	...
 ```
 
-Empty group names are skipped, instead returns itself
+Empty group names are skipped, the traverser stays in the same branch.
 ```cpp
 	// Get root group
 	auto root_ptr1 = KP.findGroup("");
