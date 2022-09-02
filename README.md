@@ -9,7 +9,7 @@ Any other ideas or changes, please isssue.
 # Using
 The main entry point is the *KPHelper* class. It takes care of creating a key, choosing version, importing, and traversing the tree.
 
-Examples:
+# Examples:
 ```cpp
 	std::string path = "credentials.kdbx";
 	std::string pass = "SuperSeretPaword";
@@ -21,7 +21,6 @@ Examples:
 //	curl ...
 ```
 
-Examples:
 ```cpp
 	std::string path = "credentials.kdbx";
 	std::string pass = "SuperSeretPaword";
