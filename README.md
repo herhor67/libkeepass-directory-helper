@@ -22,13 +22,19 @@ The main entry point is the *KPHelper* class. It takes care of creating a key, c
 ```
 
 ```cpp
-	std::string path = "credentials.kdbx";
-	std::string pass = "SuperSeretPaword";
-
-	KPHelper KP(path, pass);
-
-	auto entry_ptr = KP.findEntry("external/database/mysql");
+	auto entry_ptr = KP.findEntry("internal/databases/mysql");
   
 //	mysql_connect("localhost:3306", entry_ptr->username(), entry_ptr->password(), "table");
 //	...
+```
+
+```cpp
+	// Empty group name is skipped, instead returns base
+	auto root_ptr1 = KP.findGroup("");
+	auto root_ptr2 = KP.findGroup("/");
+	auto root_ptr3 = KP.findGroup("//////////");
+
+	auto entry_ptr1 = KP.findEntry("some/arbitrary/path/to/entry");
+	auto entry_ptr2 = KP.findEntry("/some/arbitrary/path/to/entry");
+	auto entry_ptr3 = KP.findEntry("///some//arbitrary/path/////to//entry");
 ```
