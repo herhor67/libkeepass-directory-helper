@@ -24,7 +24,6 @@ Create helper, read file with pasword, read some api key to `std::string`.
 //	curl ...
 ```
 
-
 Get a pointer to some entry, then use `username()` and `password()` directly.
 ```cpp
 	auto entry_ptr = KP.findEntry("internal/databases/mysql");
@@ -33,8 +32,7 @@ Get a pointer to some entry, then use `username()` and `password()` directly.
 //	...
 ```
 
-
-// Empty group names are skipped, instead returns itself
+Empty group names are skipped, instead returns itself
 ```cpp
 	// Get root group
 	auto root_ptr1 = KP.findGroup("");
