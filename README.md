@@ -11,25 +11,25 @@ The main entry point is the *KPHelper* class. It takes care of creating a key, c
 
 Examples:
 ```cpp
-  std::string path = "credentials.kdbx";
+	std::string path = "credentials.kdbx";
 	std::string pass = "SuperSeretPaword";
 
 	KPHelper KP(path, pass);
 
 	std::string api_key = KP.findEntry("external/whatever/api_key")->password();
   
-//  curl ...
+//	curl ...
 ```
 
 Examples:
 ```cpp
-  std::string path = "credentials.kdbx";
+	std::string path = "credentials.kdbx";
 	std::string pass = "SuperSeretPaword";
 
 	KPHelper KP(path, pass);
 
 	auto entry_ptr = KP.findEntry("external/database/mysql");
   
-//  mysql_connect("localhost:3306", entry_ptr->username(), entry_ptr->password(), "table");
-//  ...
+//	mysql_connect("localhost:3306", entry_ptr->username(), entry_ptr->password(), "table");
+//	...
 ```
