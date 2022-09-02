@@ -12,7 +12,7 @@ The main entry point is the *KPHelper* class. It takes care of creating a key, c
 
 # Examples
 
-Create helper, read file with pasword, read some api key to `std::string`.
+Create helper, import file using pasword, read some api key to `std::string`.
 ```cpp
 	std::string path = "credentials.kdbx";
 	std::string pass = "SuperSeretPaword";
