@@ -3,14 +3,14 @@ This project is a simple header-only helper to [kindahl/libkeepass](https://gith
 
 Its purpose is to make file reading even simpler, and to implement traversing of group/entry trees by name/title.
 
-Any other ideas or changes, please isssue.
+Any other ideas or changes, please issue.
 
 
 # Using
 The main entry point is the *KPHelper* class. It takes care of creating a key, choosing version, importing, and traversing the tree.
 
 
-# Examples:
+# Examples
 
 Create helper, read file with pasword, read some api key to `std::string`.
 ```cpp
