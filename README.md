@@ -9,7 +9,9 @@ Any other ideas or changes, please isssue.
 # Using
 The main entry point is the *KPHelper* class. It takes care of creating a key, choosing version, importing, and traversing the tree.
 
+
 # Examples:
+
 ```cpp
 	std::string path = "credentials.kdbx";
 	std::string pass = "SuperSeretPaword";
@@ -21,12 +23,14 @@ The main entry point is the *KPHelper* class. It takes care of creating a key, c
 //	curl ...
 ```
 
+
 ```cpp
 	auto entry_ptr = KP.findEntry("internal/databases/mysql");
   
 //	mysql_connect("localhost:3306", entry_ptr->username(), entry_ptr->password(), "table");
 //	...
 ```
+
 
 ```cpp
 	// Empty group name is skipped, instead returns base
