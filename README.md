@@ -1,7 +1,7 @@
 # libkeepass-directory-helper
 This project is a simple header-only helper to [kindahl/libkeepass](https://github.com/kindahl/libkeepass).
 
-Its purpose is to make file reading even simpler, and to implement traversing of group/entry trees by name/title.
+Its purpose is to make file reading even simpler, and to implement traversal of group/entry trees by name/title.
 
 Any other ideas or changes, please issue.
 
