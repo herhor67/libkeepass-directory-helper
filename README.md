@@ -28,7 +28,7 @@ Get a pointer to some entry, then use `username()` and `password()` directly.
 ```cpp
 	auto entry_ptr = KP.findEntry("internal/databases/mysql");
   
-//	mysql_connect("localhost:3306", entry_ptr->username(), entry_ptr->password(), "my_schema");
+//	mysql_connect("localhost:3306", entry_ptr->username()->c_str(), entry_ptr->password()->c_str(), "my_schema");
 //	...
 ```
 
